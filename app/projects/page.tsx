@@ -1,0 +1,248 @@
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { motion } from "framer-motion"
+import { ArrowRight, Menu, X } from 'lucide-react'
+
+// Project data
+const projects = [
+  {
+    id: "remote-onboarding",
+    title: "Remote Team Onboarding Hub",
+    tagline: "Streamlined the onboarding process for distributed engineering teams with async-first workflows.",
+    description:
+      "Designed and shipped a central onboarding hub to help new engineers ramp up autonomously. Identified pain points by interviewing 12 remote hires and analyzing time-to-productivity data. Collaborated with design to reduce cognitive overload via progressive disclosure UX.",
+    outcome: "Onboarding time cut by 45%, and NPS improved from 6.1 → 8.3 post-launch.",
+    tags: ["Product Manager", "UX Strategy", "Remote Ops", "Notion API", "Data Analysis"],
+    image: "/placeholder.svg?height=600&width=800",
+    link: "/projects/remote-onboarding",
+    accentColor: "emerald",
+  },
+  {
+    id: "analytics-dashboard",
+    title: "Analytics Dashboard Redesign",
+    tagline: "Rebuilt the analytics platform for marketing teams to make data-driven decisions faster.",
+    description:
+      "Led the redesign of our analytics dashboard to improve data visualization and user experience. Conducted user research with 8 marketing teams to identify key pain points and requirements. Worked closely with engineers to implement real-time data processing.",
+    outcome: "78% increase in dashboard usage and 40% reduction in time spent generating reports.",
+    tags: ["Product Strategy", "Data Visualization", "User Research", "React", "GraphQL"],
+    image: "/placeholder.svg?height=600&width=800",
+    link: "/projects/analytics-dashboard",
+    accentColor: "purple",
+  },
+  {
+    id: "payment-gateway",
+    title: "Payment Gateway Integration",
+    tagline: "Simplified payment processing for small businesses with multi-currency support.",
+    description:
+      "Designed and implemented a payment gateway integration that supports multiple currencies and payment methods. Conducted competitive analysis of 5 payment solutions to identify market gaps. Collaborated with the security team to ensure PCI compliance.",
+    outcome: "30% increase in international sales and 25% reduction in payment processing time.",
+    tags: ["FinTech", "API Design", "Security", "Node.js", "Stripe API"],
+    image: "/placeholder.svg?height=600&width=800",
+    link: "/projects/payment-gateway",
+    accentColor: "cyan",
+  },
+]
+
+export default function ProjectsPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  return (
+    <div className="min-h-screen bg-zinc-900 text-white">
+      {/* Subtle Background Gradient */}
+      <div className="fixed inset-0 z-0 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800"></div>
+
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-900/80 backdrop-blur-md border-b border-zinc-800">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              className="relative w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-purple-500 flex items-center justify-center"
+            >
+              <span className="text-xl font-bold">R</span>
+            </motion.div>
+            <span className="font-bold text-xl">Razeen MeeraAmeer</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex gap-8">
+            {[
+              { name: "About", path: "/about" },
+              { name: "Skills", path: "/skills" },
+              { name: "Projects", path: "/projects" },
+              { name: "Blog", path: "/blog" },
+              { name: "Contact", path: "/contact" },
+            ].map((item) => (
+              <motion.div key={item.name} whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
+                <Link
+                  href={item.path}
+                  className={`relative group ${
+                    item.path === "/projects" ? "text-white" : "text-zinc-400 hover:text-white"
+                  } transition-colors`}
+                >
+                  {item.name}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-emerald-400 to-purple-500 transition-all duration-300 ${
+                      item.path === "/projects" ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  ></span>
+                </Link>
+              </motion.div>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button className="md:hidden text-zinc-400 hover:text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          className="fixed inset-0 z-40 bg-zinc-900 pt-20"
+        >
+          <nav className="container mx-auto px-4 py-8 flex flex-col gap-6">
+            {[
+              { name: "About", path: "/about" },
+              { name: "Skills", path: "/skills" },
+              { name: "Projects", path: "/projects" },
+              { name: "Blog", path: "/blog" },
+              { name: "Contact", path: "/contact" },
+            ].map((item) => (
+              <Link
+                key={item.name}
+                href={item.path}
+                className={`text-2xl font-bold border-b border-zinc-800 pb-4 text-left ${
+                  item.path === "/projects" ? "text-white" : "text-zinc-200 hover:text-white"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+        </motion.div>
+      )}
+
+      {/* Main Content */}
+      <main className="container mx-auto px-4 pt-32 pb-20 relative z-10">
+        {/* Page Header */}
+        <div className="mb-16 md:mb-20 relative">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-emerald-400 to-purple-500 bg-clip-text text-transparent inline-block"
+          >
+            Projects
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-zinc-300 text-lg md:text-xl max-w-3xl"
+          >
+            A collection of projects where I've applied my technical and product management skills to solve real-world
+            problems.
+          </motion.p>
+        </div>
+
+        {/* Projects Grid - 3 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
+              className="h-full"
+            >
+              <Link href={project.link} className="h-full">
+                <div className="group h-full">
+                  {/* Card with elegant color accent */}
+                  <div className="relative h-full flex flex-col bg-zinc-800 rounded-xl overflow-hidden transition-all duration-300 group-hover:translate-y-[-4px]">
+                    {/* Glow effect on hover */}
+                    <div
+                      className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-${project.accentColor}-500/5 pointer-events-none`}
+                    ></div>
+
+                    {/* Project Image with rounded corners */}
+                    <div className="relative h-56 overflow-hidden rounded-t-xl">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+
+                      {/* Subtle image overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent opacity-60"></div>
+                    </div>
+
+                    {/* Content - Using flex-col and flex-grow to push CTA to bottom */}
+                    <div className="p-6 flex flex-col flex-grow">
+                      {/* Title with accent color on hover */}
+                      <h3
+                        className={`text-xl font-bold mb-2 text-white group-hover:text-${project.accentColor}-400 transition-colors`}
+                      >
+                        {project.title}
+                      </h3>
+
+                      {/* Tagline */}
+                      <p className="text-zinc-300 text-sm mb-4">{project.tagline}</p>
+
+                      {/* Description */}
+                      <p className="text-zinc-400 text-sm mb-4">{project.description}</p>
+
+                      {/* Outcome with accent color */}
+                      <p className={`text-${project.accentColor}-400 text-sm font-medium mb-6`}>{project.outcome}</p>
+
+                      {/* Tags - Show all tags */}
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className={`px-3 py-1 bg-zinc-700 text-xs rounded-full text-zinc-300 border border-zinc-600 group-hover:border-${project.accentColor}-500/50 transition-colors`}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* CTA - Using mt-auto to push to bottom */}
+                      <div className={`mt-auto flex items-center text-${project.accentColor}-400 text-sm font-medium`}>
+                        View Case Study
+                        <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-zinc-800 py-6 relative z-10">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-zinc-500 text-sm">&copy; {new Date().getFullYear()} Razeen MeeraAmeer. All rights reserved.</p>
+          <div className="flex gap-6 mt-4 md:mt-0">
+            <button className="text-zinc-500 hover:text-white text-sm">Privacy Policy</button>
+            <button className="text-zinc-500 hover:text-white text-sm">Terms of Service</button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
