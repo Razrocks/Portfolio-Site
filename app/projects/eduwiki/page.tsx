@@ -13,10 +13,9 @@ export default function EduWikiCaseStudy() {
 
   // Project screenshots
   const projectImages = [
-    "/modern-onboarding-dashboard.png",
-    "/digital-onboarding-checklist.png",
-    "/onboarding-dashboard.png",
-    "/collaborative-onboarding-journey.png",
+    "/edu1.png",
+    "/edu2.png",
+    "/edu3.png",
   ]
 
   // Tech stack items
@@ -90,68 +89,68 @@ export default function EduWikiCaseStudy() {
         </div>
       </section>
 
-      {/* Image Carousel */}
-      <section className="relative z-10 py-8 md:py-16 bg-zinc-800/50">
-        <div className="container mx-auto px-4">
-          <div className="relative max-w-5xl mx-auto">
-            <div
-              ref={carouselRef}
-              className="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-xl overflow-hidden shadow-xl"
-            >
-              {projectImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  animate={{
-                    opacity: currentImage === index ? 1 : 0,
-                    zIndex: currentImage === index ? 10 : 0,
-                  }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute inset-0"
-                >
-                  <Image
-                    src={image || "/placeholder.svg"}
-                    alt={`Project screenshot ${index + 1}`}
-                    fill
-                    className="object-cover object-center"
-                  />
-                </motion.div>
-              ))}
+{/* Image Carousel */}
+<section className="relative z-10 py-8 md:py-16 bg-zinc-800/50">
+  <div className="container mx-auto px-4">
+    <div className="relative max-w-4xl mx-auto">
+      <div
+        ref={carouselRef}
+        className="relative w-full aspect-video rounded-xl overflow-hidden shadow-xl bg-black"
+      >
+        {projectImages.map((image, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: currentImage === index ? 1 : 0,
+              zIndex: currentImage === index ? 10 : 0,
+            }}
+            transition={{ duration: 0.5 }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={image}
+              alt={`Project screenshot ${index + 1}`}
+              fill
+              className="object-contain"
+            />
+          </motion.div>
+        ))}
 
-              {/* Carousel Controls */}
-              <button
-                onClick={prevImage}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-black/50 transition-colors z-20"
-                aria-label="Previous image"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <button
-                onClick={nextImage}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-black/50 transition-colors z-20"
-                aria-label="Next image"
-              >
-                <ChevronRight size={24} />
-              </button>
+        {/* Carousel Controls */}
+        <button
+          onClick={prevImage}
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-black/50 transition-colors z-20"
+          aria-label="Previous image"
+        >
+          <ChevronLeft size={24} />
+        </button>
+        <button
+          onClick={nextImage}
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-black/50 transition-colors z-20"
+          aria-label="Next image"
+        >
+          <ChevronRight size={24} />
+        </button>
 
-              {/* Carousel Indicators */}
-              <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
-                {projectImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImage(index)}
-                    className={`w-2 h-2 rounded-full transition-all ${
-                      currentImage === index ? "w-8 bg-emerald-500" : "bg-white/50"
-                    }`}
-                    aria-label={`Go to image ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+        {/* Carousel Indicators */}
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
+          {projectImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImage(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                currentImage === index ? "w-8 bg-emerald-500" : "bg-white/50"
+              }`}
+              aria-label={`Go to image ${index + 1}`}
+            />
+          ))}
         </div>
-      </section>
-
+      </div>
+    </div>
+  </div>
+</section>
+      
       {/* Content Sections */}
       <div className="relative z-10 py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -279,6 +278,8 @@ export default function EduWikiCaseStudy() {
                 <li className="pl-2">Wiki-style editable course content</li>
                 <li className="pl-2">Peer review system (unlocked post-submission)</li>
                 <li className="pl-2">Interactive citation & source validation guides</li>
+                <li className="pl-2">Teacher administrator mode</li>
+                <li className="pl-2">Interactive Quizzes</li>
                 <li className="pl-2">Progress dashboards</li>
                 <li className="pl-2">Text-to-speech accessibility</li>
               </ul>

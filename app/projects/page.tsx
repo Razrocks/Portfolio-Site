@@ -9,39 +9,39 @@ import { ArrowRight, Menu, X } from 'lucide-react'
 // Project data
 const projects = [
   {
-    id: "remote-onboarding",
-    title: "Remote Team Onboarding Hub",
-    tagline: "Streamlined the onboarding process for distributed engineering teams with async-first workflows.",
+    id: "eduwiki",
+    title: "EduWiki Collaborative Learning App",
+    tagline: "Making academic writing fun and accessible for students through interactive learning.",
     description:
-      "Designed and shipped a central onboarding hub to help new engineers ramp up autonomously. Identified pain points by interviewing 12 remote hires and analyzing time-to-productivity data. Collaborated with design to reduce cognitive overload via progressive disclosure UX.",
-    outcome: "Onboarding time cut by 45%, and NPS improved from 6.1 → 8.3 post-launch.",
-    tags: ["Product Manager", "UX Strategy", "Remote Ops", "Notion API", "Data Analysis"],
-    image: "/placeholder.svg?height=600&width=800",
-    link: "/projects/remote-onboarding",
+      "Built a mobile app to teach students professional writing skills using interactive quizzes, video guides, and gamified progress tracking. Designed fun, kid friendly UI with Flutter and integrated Firebase for user authentication and score tracking.",
+    outcome: "Successfully launched beta version with full course and quiz flows, receiving positive feedback from student testers.",
+    tags: ["Product Manager", "Software Dev", "Flutter", "Dart", "Youtube API", "Firebase Firetore", "Text-to-Speech"],
+    image: "/edu1.png?height=600&width=800",
+    link: "/projects/eduwiki",
     accentColor: "emerald",
   },
   {
-    id: "analytics-dashboard",
-    title: "Analytics Dashboard Redesign",
+    id: "portbet",
+    title: "PortBet Crypto Prediction Platform",
     tagline: "Rebuilt the analytics platform for marketing teams to make data-driven decisions faster.",
     description:
       "Led the redesign of our analytics dashboard to improve data visualization and user experience. Conducted user research with 8 marketing teams to identify key pain points and requirements. Worked closely with engineers to implement real-time data processing.",
     outcome: "78% increase in dashboard usage and 40% reduction in time spent generating reports.",
     tags: ["Product Strategy", "Data Visualization", "User Research", "React", "GraphQL"],
     image: "/placeholder.svg?height=600&width=800",
-    link: "/projects/analytics-dashboard",
+    link: "/projects/portbet",
     accentColor: "purple",
   },
   {
-    id: "payment-gateway",
-    title: "Payment Gateway Integration",
+    id: "stratos",
+    title: "Stratos AI Cloud Management Platfrom",
     tagline: "Simplified payment processing for small businesses with multi-currency support.",
     description:
       "Designed and implemented a payment gateway integration that supports multiple currencies and payment methods. Conducted competitive analysis of 5 payment solutions to identify market gaps. Collaborated with the security team to ensure PCI compliance.",
     outcome: "30% increase in international sales and 25% reduction in payment processing time.",
     tags: ["FinTech", "API Design", "Security", "Node.js", "Stripe API"],
     image: "/placeholder.svg?height=600&width=800",
-    link: "/projects/payment-gateway",
+    link: "/projects/stratos",
     accentColor: "cyan",
   },
 ]
@@ -221,7 +221,7 @@ export default function ProjectsPage() {
 
                       {/* CTA - Using mt-auto to push to bottom */}
                       <div className={`mt-auto flex items-center text-${project.accentColor}-400 text-sm font-medium`}>
-                        View Case Study
+                        View Project
                         <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
                       </div>
                     </div>
