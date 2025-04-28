@@ -75,7 +75,6 @@ export default function ProjectsPage() {
               { name: "About", path: "/about" },
               { name: "Skills", path: "/skills" },
               { name: "Projects", path: "/projects" },
-              { name: "Blog", path: "/blog" },
               { name: "Contact", path: "/contact" },
             ].map((item) => (
               <motion.div key={item.name} whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
@@ -116,7 +115,6 @@ export default function ProjectsPage() {
               { name: "About", path: "/about" },
               { name: "Skills", path: "/skills" },
               { name: "Projects", path: "/projects" },
-              { name: "Blog", path: "/blog" },
               { name: "Contact", path: "/contact" },
             ].map((item) => (
               <Link

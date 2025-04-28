@@ -73,7 +73,7 @@ export default function AnalyticsDashboardCaseStudy() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-500 bg-clip-text text-transparent">
               PortBet Crypto Portfolio Predictions Platform
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-300 mb-10">Product Manager & Frontend Dev + Backend Integrations – Team of 3</p>
+            <p className="text-xl md:text-2xl text-zinc-300 mb-10">Product Manager & Frontend Dev – Team of 3</p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.a
                 href="https://github.com/rtagomata/PortBet"

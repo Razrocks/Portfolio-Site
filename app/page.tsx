@@ -34,24 +34,25 @@ export default function Home() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-8">
-            {["About", "Skills", "Projects", "Contact"].map((item) => (
-              <motion.div key={item} whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
-                {item === "Projects" ? (
+          {["About", "Skills", "Projects", "Contact"].map((item) => {
+              const hrefMap: Record<string, string> = {
+                About: "/about",
+                Skills: "/skills",
+                Projects: "/projects",
+                Contact: "/contact",
+              };
+              return (
+                <motion.div key={item} whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
                   <Link
-                    href="/projects"
+                    href={hrefMap[item]}
                     className="text-zinc-400 hover:text-white transition-colors relative group"
                   >
                     {item}
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
                   </Link>
-                ) : (
-                  <button className="text-zinc-400 hover:text-white transition-colors relative group">
-                    {item}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
-                  </button>
-                )}
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </nav>
 
           {/* Mobile Menu Button */}
