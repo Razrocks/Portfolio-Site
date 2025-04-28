@@ -20,8 +20,8 @@ export default function SkillsPage() {
 
   // Technical Skills
   const technicalSkills = [
-    "Flutter (Intermediate)",
-    "Dart (Intermediate)",
+    "Flutter, React, Node.js (Intermediate)",
+    "Dart, Python, C++, Java (Intermediate)",
     "Firebase (Authentication, Firestore, Hosting)",
     "REST APIs (Integrations with YouTube API)",
     "Git/GitHub (Version Control)",
@@ -41,7 +41,7 @@ export default function SkillsPage() {
   const currentlyLearning = [
     "UX Research Techniques",
     "Advanced Product Metrics (North Star Metrics, Retention Analysis)",
-    "SQL for Data Analysis",
+    "AI Apps and Integrations (including pipelines)",
   ]
 
   // Soft Skills & Tools
@@ -49,9 +49,10 @@ export default function SkillsPage() {
     "Empathetic Communication",
     "Problem-Solving Mindset",
     "Collaborative Teamwork",
-    "Notion (Project Management)",
-    "Figma (Wireframing & Prototyping)",
+    "Notion, Miscrosoft 360 Suite (Project Management)",
+    "Figma, Justinmind, Framer (Wireframing & Prototyping)",
     "Slack, Zoom (Remote Collaboration)",
+    "Facebook Advertisements"
   ]
 
   return (
@@ -157,7 +158,7 @@ export default function SkillsPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-zinc-300 text-lg md:text-xl max-w-3xl"
           >
-            Here's a snapshot of my technical skills, product management knowledge, and the tools I use to bring ideas
+            Here's a snapshot of my technical skills, product management and developer knowledge, and the tools I use to bring ideas
             to life. I believe in continuous learning and building practical solutions.
           </motion.p>
         </div>
