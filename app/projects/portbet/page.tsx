@@ -22,10 +22,12 @@ export default function AnalyticsDashboardCaseStudy() {
   // Tech stack items
   const techStack = [
     { name: "React", category: "Frontend" },
-    { name: "GraphQL", category: "API" },
-    { name: "D3.js", category: "Data Visualization" },
-    { name: "Node.js", category: "Backend" },
-    { name: "PostgreSQL", category: "Database" },
+    { name: "Typescript", category: "Frontend" },
+    { name: "Solidity", category: "Backend Logic" },
+    { name: "Javascript", category: "Backend Storage" },
+    { name: "Apex Charting", category: "Charting" },
+    { name: "Axiom", category: "Pricing API" },
+    { name: "SQL", category: "Database" },
   ]
 
   // Handle carousel navigation
@@ -189,20 +191,19 @@ export default function AnalyticsDashboardCaseStudy() {
             </h2>
             <div className="space-y-6 text-zinc-300">
               <p className="text-lg leading-relaxed">
-                The Analytics Dashboard Redesign project was initiated to address the growing needs of marketing teams
-                who were struggling with the existing analytics platform. The original dashboard was built several years
-                ago and had become cluttered, slow, and difficult to navigate as new features were added over time.
+              PortBet is a crypto speculation platform that lets users place directional bets on whether a portfolio of crypto
+              assets will reach a target valuation by a given expiry date. Unlike traditional trading platforms that only support
+              leverage-based bets on single tokens, PortBet introduces a new category of financial primitive: the portfolio
+              contract.
               </p>
               <p className="text-lg leading-relaxed">
-                As the product manager for this initiative, I led a cross-functional team to completely reimagine how
-                marketing teams interact with their data. We focused on creating a more intuitive, faster, and more
-                actionable dashboard that would help teams make data-driven decisions without requiring them to be data
-                scientists.
+              I led the frontend development and product architecture, collaborating closely with two other co-founders. The platform
+              enables users to create or participate in contracts with For/Against positions, define payout logic (Basic or
+              Advanced), and optionally exit early or trade positions in a marketplace.
               </p>
               <p className="text-lg leading-relaxed">
-                The redesigned dashboard features customizable widgets, real-time data processing, improved data
-                visualization, and a streamlined interface that prioritizes the most important metrics while making
-                deeper insights accessible through progressive disclosure.
+              Our goal was to lower the knowledge barrier for crypto speculation while allowing high-upside returns for users with
+              smaller capital.
               </p>
             </div>
           </motion.section>
@@ -221,11 +222,10 @@ export default function AnalyticsDashboardCaseStudy() {
             </h2>
             <div className="space-y-6 text-zinc-300">
               <p className="text-lg leading-relaxed">
-                Marketing teams were spending an average of 5.2 hours per week generating reports from our platform,
-                with many resorting to exporting data to Excel for further analysis. User interviews revealed that the
-                dashboard was overwhelming, with too many metrics displayed at once and no clear hierarchy of
-                information. Additionally, the dashboard was slow to load and update, causing frustration and reducing
-                productivity.
+              Crypto speculation currently relies heavily on margin trading or holding assets outright. This introduces high
+              cognitive and capital costs, especially for casual users. Additionally, there is no mechanism to bet on the collective
+              performance of a basket of tokens — despite the fact that investors often think in terms of portfolios, not
+              individual coins.
               </p>
             </div>
           </motion.section>
@@ -245,14 +245,14 @@ export default function AnalyticsDashboardCaseStudy() {
             <div className="space-y-6 text-zinc-300">
               <ul className="list-disc pl-8 space-y-3 text-lg">
                 <li className="pl-2">
-                  Conducted user research with 8 marketing teams to identify pain points and requirements
+                Authored the core technical spec for multi-token portfolio contracts and payout logic (Basic method)
                 </li>
-                <li className="pl-2">Created user personas and journey maps to understand different use cases</li>
+                <li className="pl-2">Designed and built the entire frontend in React/TS, upgrading the platform from a single-server monolith to a client-server architecture</li>
                 <li className="pl-2">
-                  Developed a comprehensive product vision document to align stakeholders (see Notion link)
+                Wrote and published Notion-based product documentation for internal alignment
                 </li>
                 <li className="pl-2">
-                  Collaborated with designers to create wireframes and prototypes for user testing
+                Collaborated/designed on logic for For/Against position locking and payouts
                 </li>
                 <li className="pl-2">
                   Worked with engineers to implement real-time data processing and optimize performance
@@ -307,12 +307,12 @@ export default function AnalyticsDashboardCaseStudy() {
             </h2>
             <div className="space-y-6 text-zinc-300">
               <ul className="list-disc pl-8 space-y-3 text-lg">
-                <li className="pl-2">Customizable dashboard with drag-and-drop widgets</li>
-                <li className="pl-2">Real-time data processing and updates</li>
-                <li className="pl-2">Advanced data visualization with interactive charts</li>
-                <li className="pl-2">Automated report generation and scheduling</li>
-                <li className="pl-2">User-defined alerts and notifications</li>
-                <li className="pl-2">Role-based access control and data permissions</li>
+                <li className="pl-2">Create or bet on crypto portfolio contracts with defined expiry and target valuation</li>
+                <li className="pl-2">For/Against position system that enables directional bets with capped downside</li>
+                <li className="pl-2">Early exit functionality with fee-based collateral withdrawal</li>
+                <li className="pl-2">Position window mechanics to ensure fair play and incentivize early bets</li>
+                <li className="pl-2">Basic payout engine that distributes the losing side’s TVL proportionally</li>
+                <li className="pl-2">ERC-20 ETH-based payments and withdrawals</li>
               </ul>
             </div>
           </motion.section>
@@ -333,32 +333,36 @@ export default function AnalyticsDashboardCaseStudy() {
             <div className="space-y-8">
               {/* Challenge 1 */}
               <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-purple-500/20 transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-purple-400">Information Overload</h3>
+                <h3 className="text-xl font-bold mb-3 text-purple-400">Early Bet Disincentive</h3>
                 <div className="bg-zinc-700/50 p-4 rounded-lg">
                   <h4 className="font-medium mb-2 text-white">Solution:</h4>
                   <p className="text-zinc-300">
-                    Implemented progressive disclosure design pattern with customizable widgets and focused views
+                  Proposed a contract "position window" to encourage early participation and prevent unfair last-minute betting.
+                  Also explored a dynamic pricing formula based on distance from target valuation.
                   </p>
                 </div>
               </div>
 
               {/* Challenge 2 */}
               <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-cyan-500/20 transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-cyan-400">Performance Issues</h3>
+                <h3 className="text-xl font-bold mb-3 text-cyan-400">Frontend Modularity</h3>
                 <div className="bg-zinc-700/50 p-4 rounded-lg">
                   <h4 className="font-medium mb-2 text-white">Solution:</h4>
                   <p className="text-zinc-300">
-                    Rebuilt the backend with GraphQL for more efficient data fetching and implemented data caching
+                  Split the system into frontend and backend servers. Used Next.js with modular components and built re-usable
+                  carousel + contract display interfaces.
                   </p>
                 </div>
               </div>
 
               {/* Challenge 3 */}
               <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-emerald-500/20 transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-emerald-400">Diverse User Needs</h3>
+                <h3 className="text-xl font-bold mb-3 text-emerald-400">Abstracting Betting Logic for Users</h3>
                 <div className="bg-zinc-700/50 p-4 rounded-lg">
                   <h4 className="font-medium mb-2 text-white">Solution:</h4>
-                  <p className="text-zinc-300">Created role-based dashboard templates and user-specific saved views</p>
+                  <p className="text-zinc-300">Translated complex smart contract mechanics into understandable UX: e.g., "Will this basket hit $X by Friday?"
+                  with toggles for up/down bets, confidence sliders, and simplified ETH commitment inputs.
+                  </p>
                 </div>
               </div>
             </div>
@@ -379,17 +383,16 @@ export default function AnalyticsDashboardCaseStudy() {
 
             <div className="space-y-6 text-zinc-300">
               <ul className="list-disc pl-8 space-y-3 text-lg">
-                <li className="pl-2">78% increase in dashboard usage after redesign</li>
-                <li className="pl-2">40% reduction in time spent generating reports</li>
+                <li className="pl-2">Validated concept with multiple DeFi users who expressed interest in portfolio betting</li>
+                <li className="pl-2">Improved platform modularity by splitting server/frontend, enabling future scalability</li>
                 <li className="pl-2">
-                  NPS score improved from 32 to 68, with users specifically praising the intuitive interface and
-                  customization options
+                Learned to bridge technical execution with user experience clarity in financial products
                 </li>
                 <li className="pl-2">
-                  Learned the importance of balancing power-user features with simplicity for occasional users
+                Discovered that most speculation users don’t want control over token-by-token positions
                 </li>
                 <li className="pl-2">
-                  Discovered that real-time data updates were more valuable to users than initially anticipated
+                Refined internal process using Notion for product specs, vision alignment, and roadmap planning
                 </li>
               </ul>
             </div>

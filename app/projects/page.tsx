@@ -23,11 +23,11 @@ const projects = [
   {
     id: "portbet",
     title: "PortBet Crypto Prediction Platform",
-    tagline: "Rebuilt the analytics platform for marketing teams to make data-driven decisions faster.",
+    tagline: "The premier portfolio predictions market.",
     description:
-      "Led the redesign of our analytics dashboard to improve data visualization and user experience. Conducted user research with 8 marketing teams to identify key pain points and requirements. Worked closely with engineers to implement real-time data processing.",
-    outcome: "78% increase in dashboard usage and 40% reduction in time spent generating reports.",
-    tags: ["Product Strategy", "Data Visualization", "User Research", "React", "GraphQL"],
+      "Led frontend development and contributed to product strategy for PortBet, a platform that enables users to place directional bets on the future value of crypto portfolios. Designed + built core UX, authored internal product specs, and collaborated with co-founders to define contract logic, payouts, and risk models.",
+    outcome: "Built and launched internal beta with simulated ETH flow, validated market need through early user testing and aligned team with scalable frontend-backend architecture.",
+    tags: ["Product Management", "Software Dev", "Crypto", "React", "Typescript","Javascript","Pricing API", "Trading"],
     image: "/placeholder.svg?height=600&width=800",
     link: "/projects/portbet",
     accentColor: "purple",
