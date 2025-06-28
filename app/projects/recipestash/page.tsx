@@ -13,9 +13,9 @@ export default function EduWikiCaseStudy() {
 
   // Project screenshots
   const projectImages = [
-    "/edu1.png",
-    "/edu2.png",
-    "/edu3.png",
+    "/rec1.png",
+    "/rec2.png",
+    "/rec3.png",
   ]
 
   // Tech stack items
@@ -23,8 +23,9 @@ export default function EduWikiCaseStudy() {
     { name: "Flutter", category: "Framework" },
     { name: "Dart", category: "Language" },
     { name: "Firebase Firestore", category: "Database" },
-    { name: "YouTube API", category: "Integration" },
-    { name: "Text-to-Speech Library", category: "Accessibility" },
+    { name: "SQLite", category: "Local Storage	" },
+    { name: "Camera + Images", category: "Media Access" },
+    { name: "HTTP Requests", category: "Networking" },
   ]
 
   // Handle carousel navigation
@@ -53,7 +54,7 @@ export default function EduWikiCaseStudy() {
       <div className="fixed top-6 left-6 z-50">
         <Link
           href="/projects"
-          className="flex items-center gap-2 px-4 py-2 bg-zinc-800/80 backdrop-blur-sm rounded-full border border-zinc-700 hover:border-emerald-500/50 transition-all"
+          className="flex items-center gap-2 px-4 py-2 bg-zinc-800/80 backdrop-blur-sm rounded-full border border-zinc-700 hover:border-cyan-500/50 transition-all"
         >
           <ArrowLeft size={16} />
           <span>Back to Projects</span>
@@ -69,13 +70,13 @@ export default function EduWikiCaseStudy() {
             transition={{ duration: 0.5 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-purple-500 bg-clip-text text-transparent">
-              EduWiki – Collaborative Academic Learning Platform
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              RecipeStash – All In One Recipe Management App
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-300 mb-10">Product Manager & Lead Developer – Team of 3</p>
+            <p className="text-xl md:text-2xl text-zinc-300 mb-10">Product Manager & Developer – Team of 3</p>
             <div className="flex justify-center">
               <motion.a
-                href="https://github.com/Razrocks/EduWiki"
+                href="https://github.com/Razrocks/RecipestashApp.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -140,7 +141,7 @@ export default function EduWikiCaseStudy() {
               key={index}
               onClick={() => setCurrentImage(index)}
               className={`w-2 h-2 rounded-full transition-all ${
-                currentImage === index ? "w-8 bg-emerald-500" : "bg-white/50"
+                currentImage === index ? "w-8 bg-cyan-500" : "bg-white/50"
               }`}
               aria-label={`Go to image ${index + 1}`}
             />
@@ -163,27 +164,24 @@ export default function EduWikiCaseStudy() {
             className="mb-16 md:mb-24"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
-              <span className="inline-block w-12 h-1 bg-emerald-500"></span>
+              <span className="inline-block w-12 h-1 bg-cyan-500"></span>
               Overview
             </h2>
             <div className="space-y-6 text-zinc-300">
               <p className="text-lg leading-relaxed">
-                EduWiki is a mobile-first academic collaboration platform built to help undergraduates bridge the gap
-                between passive classroom learning and the active research, writing, and peer review practices expected
-                in higher education. Designed for students transitioning into university-level academics, the app
-                simulates a wiki-style environment where users engage in content creation, evaluate peer submissions,
-                and build academic writing habits through structured learning modules.
+                Recipe Stash is a mobile-first recipe management platform built to address the fragmented experience home cooks face when storing and organizing culinary content.
+                 Designed with scalability and offline-first access in mind, the app combines robust local storage with cloud synchronization to ensure seamless access to personalized recipe data across devices.
+
               </p>
               <p className="text-lg leading-relaxed">
-                Each course features guided units, citation tutorials, source validation exercises, and feedback loops —
-                enabling students to think critically, write effectively, and understand what makes a credible
-                contribution to academic discourse. The app was developed with an accessibility-first mindset (e.g.,
-                text-to-speech for long-form content) and features gamified progress tracking to maintain engagement and
-                reinforce learning outcomes over time.
+                The App offers structured user flows for creating, editing, and categorizing recipes, complete with image uploads, theme customization, and shareable outputs. 
+                Built using Flutter and integrated with both SQLite and Firebase Firestore, Recipe Stash provides a performant cross-platform experience with real-time
+                cloud syncing and reliable offline functionality.
+                To maintain engagement, the app features daily cooking tips, randomized recipe suggestions, and contextual notifications.
+                A focus on accessibility and responsive UI ensures usability across a diverse user base, while snackbars and dialogs reinforce consistent user feedback.
               </p>
               <p className="text-lg leading-relaxed">
-                EduWiki isn't just another study tool — it's an interactive scaffold that mirrors real-world research
-                workflows in a format designed for undergrads.
+                Recipe Stash is more than a digital archive — it’s a scalable and interactive tool that supports the evolving needs of modern home cooks.
               </p>
             </div>
           </motion.section>
@@ -202,9 +200,9 @@ export default function EduWikiCaseStudy() {
             </h2>
             <div className="space-y-6 text-zinc-300">
               <p className="text-lg leading-relaxed">
-                First-year university students struggle to adapt to the academic rigor of post-secondary education.
-                Challenges like evaluating sources, proper citations, and analytical writing are rarely taught
-                interactively. Existing tools are passive and lack real feedback loops.
+                Home cooks often struggle to keep track of recipes scattered across physical notes, web bookmarks, and screenshots.
+                Most existing apps lack personalization, offer clunky UX, or make syncing across devices unreliable. 
+                There's a need for a clean, accessible, and dynamic solution that brings everything into one well put together app.
               </p>
             </div>
           </motion.section>
@@ -223,11 +221,11 @@ export default function EduWikiCaseStudy() {
             </h2>
             <div className="space-y-6 text-zinc-300">
               <ul className="list-disc pl-8 space-y-3 text-lg">
-                <li className="pl-2">Led product strategy and scoped MVP features</li>
-                <li className="pl-2">Conducted research on academic transition challenges</li>
-                <li className="pl-2">Designed peer review + wiki-edit flows</li>
-                <li className="pl-2">Built core infrastructure using Flutter & Firebase</li>
-                <li className="pl-2">Integrated YouTube API & text-to-speech for learning guides</li>
+                <li className="pl-2">Led product strategy and scoped core features for MVP</li>
+                <li className="pl-2">Designed UI/UX for multi-screen navigation and flow</li>
+                <li className="pl-2">Developed frontend and backend using Flutter & Firebase</li>
+                <li className="pl-2">Implemented data syncing between local (SQLite) and cloud (Firestore)</li>
+                <li className="pl-2">Added daily engagement features, including tips and recipe suggestions</li>
               </ul>
             </div>
           </motion.section>
@@ -252,7 +250,7 @@ export default function EduWikiCaseStudy() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="bg-zinc-800 border border-zinc-700 rounded-lg p-4 hover:border-emerald-500/30 transition-colors"
+                  className="bg-zinc-800 border border-zinc-700 rounded-lg p-4 hover:border-cyan-500/30 transition-colors"
                 >
                   <h3 className="font-medium text-white">{tech.name}</h3>
                   <p className="text-sm text-zinc-400">{tech.category}</p>
@@ -275,13 +273,13 @@ export default function EduWikiCaseStudy() {
             </h2>
             <div className="space-y-6 text-zinc-300">
               <ul className="list-disc pl-8 space-y-3 text-lg">
-                <li className="pl-2">Wiki-style editable course content</li>
-                <li className="pl-2">Peer review system (unlocked post-submission)</li>
-                <li className="pl-2">Interactive citation & source validation guides</li>
-                <li className="pl-2">Teacher administrator mode</li>
-                <li className="pl-2">Interactive Quizzes</li>
-                <li className="pl-2">Progress dashboards</li>
-                <li className="pl-2">Text-to-speech accessibility</li>
+                <li className="pl-2">Multi-screen navigation with bottom nav bar</li>
+                <li className="pl-2">Recipe creation, editing, and detailed view</li>
+                <li className="pl-2">Local + cloud storage with syncing</li>
+                <li className="pl-2">Share and print functionality</li>
+                <li className="pl-2">Snackbars and confirmation dialogs for key actions</li>
+                <li className="pl-2">Account management (login, switch account)</li>
+                <li className="pl-2">Theme customization with color picker and dark mode</li>
               </ul>
             </div>
           </motion.section>
@@ -301,29 +299,29 @@ export default function EduWikiCaseStudy() {
 
             <div className="space-y-8">
               {/* Challenge 1 */}
-              <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-emerald-500/20 transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-emerald-400">Low Student Motivation</h3>
+              <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-cyan-500/20 transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-cyan-400">Scattered Data Storage</h3>
                 <div className="bg-zinc-700/50 p-4 rounded-lg">
                   <h4 className="font-medium mb-2 text-white">Solution:</h4>
-                  <p className="text-zinc-300">Gamified progress system.</p>
+                  <p className="text-zinc-300">Implemented reliable local storage via SQLite with Firestore syncing for cloud backup and device switching.</p>
                 </div>
               </div>
 
               {/* Challenge 2 */}
               <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-purple-500/20 transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-purple-400">Lack of Credible Source Awareness.</h3>
+                <h3 className="text-xl font-bold mb-3 text-purple-400">User Engagement & Retention</h3>
                 <div className="bg-zinc-700/50 p-4 rounded-lg">
                   <h4 className="font-medium mb-2 text-white">Solution:</h4>
-                  <p className="text-zinc-300">Built citation + source guide with quizzes.</p>
+                  <p className="text-zinc-300">Added daily recipe suggestions and cooking tips, along with snackbars and notifications for key interactions.</p>
                 </div>
               </div>
 
               {/* Challenge 3 */}
-              <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-cyan-500/20 transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-cyan-400">Passive Learning Habits</h3>
+              <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-emerald-500/20 transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-emerald-400">Personalization Needs</h3>
                 <div className="bg-zinc-700/50 p-4 rounded-lg">
                   <h4 className="font-medium mb-2 text-white">Solution:</h4>
-                  <p className="text-zinc-300">Required content creation + feedback to progress.</p>
+                  <p className="text-zinc-300">Included theme customization via color picker and seamless photo addition through camera and gallery support.</p>
                 </div>
               </div>
             </div>
@@ -338,15 +336,16 @@ export default function EduWikiCaseStudy() {
             className="mb-16 md:mb-24"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
-              <span className="inline-block w-12 h-1 bg-emerald-500"></span>
+              <span className="inline-block w-12 h-1 bg-cyan-500"></span>
               Impact & Learnings
             </h2>
 
             <div className="space-y-6 text-zinc-300">
               <ul className="list-disc pl-8 space-y-3 text-lg">
-                <li className="pl-2">Built working MVP and demoed to academic peers</li>
-                <li className="pl-2">Reinforced my ability to own a product from idea to execution</li>
-                <li className="pl-2">Learned how to ship accessible UX under scope constraints</li>
+                <li className="pl-2">Successfully built and tested MVP across devices</li>
+                <li className="pl-2">Strengthened my ability to ship full-stack Flutter apps</li>
+                <li className="pl-2">Learned how to create seamless syncing between local and cloud storage</li>
+                <li className="pl-2">Reinforced UX design principles by building intuitive flows for diverse users</li>
               </ul>
             </div>
           </motion.section>
@@ -355,7 +354,7 @@ export default function EduWikiCaseStudy() {
           <div className="flex justify-center mt-16">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-800 hover:bg-zinc-700 rounded-lg border border-zinc-700 hover:border-emerald-500/50 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-800 hover:bg-zinc-700 rounded-lg border border-zinc-700 hover:border-cyan-500/50 transition-all"
             >
               <ArrowLeft size={18} />
               Back to All Projects

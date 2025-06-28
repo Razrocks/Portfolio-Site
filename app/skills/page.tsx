@@ -20,8 +20,7 @@ export default function SkillsPage() {
 
   // Technical Skills
   const technicalSkills = [
-    "Flutter (Intermediate)",
-    "Dart (Intermediate)",
+    "Flutter, Dart, Python, TypeScript, JavaScript, C++, C#",
     "Firebase (Authentication, Firestore, Hosting)",
     "REST APIs (Integrations with YouTube API)",
     "Git/GitHub (Version Control)",
@@ -34,7 +33,6 @@ export default function SkillsPage() {
     "Human-Computer Interaction (User Research, UX/UI Design Principles)",
     "Advanced Web Development (API Development, Frontend/Backend Integration)",
     "Data Management Systems (Database Design, SQL)",
-    "Embedded Systems (Systems Thinking, Hardware/Software Interaction)",
   ]
 
   // Currently Learning
@@ -318,7 +316,7 @@ export default function SkillsPage() {
                   className="flex items-start gap-3"
                 >
                   <span className="mt-1.5 w-2 h-2 bg-rose-400 rounded-full flex-shrink-0"></span>
-                  <span className="text-zinc-300">Product Management Workshop - Stanford d.school</span>
+                  <span className="text-zinc-300">Built and led Portbet, a Web3 options market, applying end-to-end product development, research, and design</span>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
@@ -328,7 +326,7 @@ export default function SkillsPage() {
                   className="flex items-start gap-3"
                 >
                   <span className="mt-1.5 w-2 h-2 bg-rose-400 rounded-full flex-shrink-0"></span>
-                  <span className="text-zinc-300">UX Research Fundamentals - Nielsen Norman Group</span>
+                  <span className="text-zinc-300">Conducted independent UX research and market discovery using Notion, user interviews, and surveys</span>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
@@ -338,7 +336,7 @@ export default function SkillsPage() {
                   className="flex items-start gap-3"
                 >
                   <span className="mt-1.5 w-2 h-2 bg-rose-400 rounded-full flex-shrink-0"></span>
-                  <span className="text-zinc-300">Agile Development Bootcamp - Scrum Alliance</span>
+                  <span className="text-zinc-300">Applied agile planning tools (Trello, Notion, and GitHub Projects) to run weekly sprints and retrospectives</span>
                 </motion.li>
               </ul>
             </div>

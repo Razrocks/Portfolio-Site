@@ -33,15 +33,15 @@ const projects = [
     accentColor: "purple",
   },
   {
-    id: "stratos",
-    title: "Stratos AI Cloud Management Platfrom",
-    tagline: "Simplified payment processing for small businesses with multi-currency support.",
+    id: "recipestash",
+    title: "RecipeStash Recipe Management App",
+    tagline: "The ultimate recipe management app for all your cooking needs.",
     description:
       "Designed and implemented a payment gateway integration that supports multiple currencies and payment methods. Conducted competitive analysis of 5 payment solutions to identify market gaps. Collaborated with the security team to ensure PCI compliance.",
     outcome: "30% increase in international sales and 25% reduction in payment processing time.",
-    tags: ["FinTech", "API Design", "Security", "Node.js", "Stripe API"],
-    image: "/placeholder.svg?height=600&width=800",
-    link: "/projects/stratos",
+    tags: ["Product Management", "Flutter", "Dart", "Firebase Firetore", "Camera API"],
+    image: "/rec1.png",
+    link: "/projects/recipestash",
     accentColor: "cyan",
   },
 ]
