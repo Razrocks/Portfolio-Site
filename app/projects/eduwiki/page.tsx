@@ -72,7 +72,7 @@ export default function EduWikiCaseStudy() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-purple-500 bg-clip-text text-transparent">
               EduWiki – Collaborative Academic Learning Platform
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-300 mb-10">Product Manager & Lead Developer – Team of 3</p>
+            <p className="text-xl md:text-2xl text-zinc-300 mb-10">Product Manager & Lead Developer</p>
             <div className="flex justify-center">
               <motion.a
                 href="https://github.com/Razrocks/EduWiki"

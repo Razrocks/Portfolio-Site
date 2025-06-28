@@ -10,7 +10,7 @@ export default function SkillsPage() {
 
   // Product Management Skills
   const productSkills = [
-    "Roadmapping & Prioritization (RICE, MoSCoW)",
+    "Roadmapping & Prioritization (RICE)",
     "Feature Specification & User Story Writing",
     "Product Discovery & User Interviews",
     "A/B Testing and Experiment Design",
@@ -22,9 +22,9 @@ export default function SkillsPage() {
   const technicalSkills = [
     "Flutter, Dart, Python, TypeScript, JavaScript, C++, C#",
     "Firebase (Authentication, Firestore, Hosting)",
-    "REST APIs (Integrations with YouTube API)",
-    "Git/GitHub (Version Control)",
-    "Text-to-Speech (TTS) API Implementation",
+    "REST APIs, CRMs, AI, Microsoft Suite, ",
+    "Git/GitHub, Docker etc.",
+    "Full-Stack technologies",
   ]
 
   // Relevant Coursework
@@ -38,8 +38,8 @@ export default function SkillsPage() {
   // Currently Learning
   const currentlyLearning = [
     "UX Research Techniques",
-    "Advanced Product Metrics (North Star Metrics, Retention Analysis)",
-    "SQL for Data Analysis",
+    "Artificial Agent Integrations",
+    "Rust",
   ]
 
   // Soft Skills & Tools

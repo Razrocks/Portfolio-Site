@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Twitter, Linkedin, Github, Mail, Menu, X, Code, LineChart, Terminal } from "lucide-react"
+import { Menu, X, Code, LineChart, Terminal } from "lucide-react"
 import { motion } from "framer-motion"
 import { useTypewriter } from "@/hooks/use-typewriter"
 
@@ -34,13 +34,13 @@ export default function Home() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-8">
-          {["About", "Skills", "Projects", "Contact"].map((item) => {
+            {["About", "Skills", "Projects", "Contact"].map((item) => {
               const hrefMap: Record<string, string> = {
                 About: "/about",
                 Skills: "/skills",
                 Projects: "/projects",
                 Contact: "/contact",
-              };
+              }
               return (
                 <motion.div key={item} whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
                   <Link
@@ -51,7 +51,7 @@ export default function Home() {
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
                   </Link>
                 </motion.div>
-              );
+              )
             })}
           </nav>
 
@@ -82,22 +82,23 @@ export default function Home() {
                   {item}
                 </Link>
               ) : (
-                <button
+                <Link
                   key={item}
+                  href={item === "About" ? "/about" : item === "Skills" ? "/skills" : "/contact"}
                   className="text-2xl font-bold text-zinc-200 hover:text-white border-b border-zinc-800 pb-4 text-left"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item}
-                </button>
-              )
+                </Link>
+              ),
             )}
           </nav>
         </motion.div>
       )}
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 pt-32 pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <main className="container mx-auto px-4 pt-32 pb-32 min-h-screen flex items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -133,32 +134,11 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <button className="inline-block bg-gradient-to-r from-emerald-500 to-purple-600 text-white font-medium py-3 px-8 rounded-full hover:shadow-lg hover:shadow-emerald-500/20 transition-all">
-                Contact me!
-              </button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.5 }}
-              className="flex gap-6 pt-8"
-            >
-              {[
-                { icon: <Twitter size={20} />, label: "Twitter" },
-                { icon: <Linkedin size={20} />, label: "LinkedIn" },
-                { icon: <Github size={20} />, label: "GitHub" },
-                { icon: <Mail size={20} />, label: "Email" },
-              ].map((social) => (
-                <motion.button
-                  key={social.label}
-                  aria-label={social.label}
-                  whileHover={{ y: -5, color: "#10b981" }}
-                  className="text-zinc-400 hover:text-white transition-colors"
-                >
-                  {social.icon}
-                </motion.button>
-              ))}
+              <Link href="/contact">
+                <button className="inline-block bg-gradient-to-r from-emerald-500 to-purple-600 text-white font-medium py-3 px-8 rounded-full hover:shadow-lg hover:shadow-emerald-500/20 transition-all">
+                  Contact me!
+                </button>
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -255,9 +235,32 @@ export default function Home() {
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        "React", "Node.js", "TypeScript", "Python", "Java", "Docker", "Flutter",
-                        "SQL", "MongoDB", "PostgreSQL", "C++", "Css", "Justinmind", "Figma",
-                        "Git", "Word", "Excel", "Slides", "Notion", "Framer", "Slack", "REST APIs"
+                        "React",
+                        "Node.js",
+                        "TypeScript",
+                        "Python",
+                        "Java",
+                        "Docker",
+                        "Flutter",
+                        "SQL",
+                        "MongoDB",
+                        "PostgreSQL",
+                        "C++",
+                        "Css",
+                        "Justinmind",
+                        "Figma",
+                        "Git",
+                        "Word",
+                        "Excel",
+                        "Slides",
+                        "Notion",
+                        "Framer",
+                        "Slack",
+                        "REST APIs",
+                        "Claude",
+                        "Chatgpt",
+                        "CoPilot",
+                        "CRMs",
                       ].map((tech) => (
                         <span
                           key={tech}
@@ -276,9 +279,11 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-zinc-800 py-6">
+      <footer className="border-t border-zinc-800 py-6 relative z-10 mt-auto">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-zinc-500 text-sm">&copy; {new Date().getFullYear()} Razeen. All rights reserved.</p>
+          <p className="text-zinc-500 text-sm">
+            &copy; {new Date().getFullYear()} Razeen MeeraAmeer. All rights reserved.
+          </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <button className="text-zinc-500 hover:text-white text-sm">Privacy Policy</button>
             <button className="text-zinc-500 hover:text-white text-sm">Terms of Service</button>

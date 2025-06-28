@@ -75,7 +75,7 @@ export default function EduWikiCaseStudy() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
               RecipeStash – All In One Recipe Management App
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-300 mb-10">Product Manager & Developer – Team of 3</p>
+            <p className="text-xl md:text-2xl text-zinc-300 mb-10">Product Manager & Developer</p>
             <div className="flex justify-center">
               <motion.a
                 href="https://github.com/Razrocks/RecipestashApp.git"

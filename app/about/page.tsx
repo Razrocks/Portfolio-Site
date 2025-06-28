@@ -79,7 +79,7 @@ export default function AboutPage() {
                 I'm Razeen, a technical product builder based in Toronto, passionate about creating solutions at the intersection of technology, business needs, and user experience.
               </p>
               <p>
-                With a foundation in software development and a growing focus on product management, I enjoy turning ideas into user-centered products through iterative execution and cross-functional collaboration.
+                With a foundation in software development and a growing focus on product management, I enjoy turning ideas into user centered products through iterative execution and cross-functional collaboration.
               </p>
               <p>
                 I believe that great products come from understanding real user problems, building iteratively, and relentlessly focusing on delivering meaningful outcomes.
@@ -109,7 +109,7 @@ export default function AboutPage() {
             <div className="bg-zinc-800/50 rounded-xl p-6 border border-zinc-700">
               <h2 className="text-2xl font-bold mb-4">Beyond Work</h2>
               <p className="text-zinc-300 text-lg">
-                Outside of tech, I enjoy fitness, staying on top of emerging technologies, and tackling creative problem-solving challenges.
+                Outside of tech, I enjoy fitness, staying on top of emerging technologies, keeping up with web3 and crypto products, aswell as Swimming.
               </p>
             </div>
           </motion.section>
