@@ -17,6 +17,9 @@ export default function AnalyticsDashboardCaseStudy() {
     "/port2.png",
     "/port3.png",
     "/port4.png",
+    "/port5.png",
+    "/port6.png",
+    "/port7.png",
   ]
 
   // Tech stack items
@@ -73,9 +76,9 @@ export default function AnalyticsDashboardCaseStudy() {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-500 bg-clip-text text-transparent">
-              PortBet Crypto Portfolio Predictions Platform
+              PortBet Crypto Portfolio Predictions Platform ( In Dev)
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-300 mb-10">Product Manager & Frontend Dev – Team of 3</p>
+            <p className="text-xl md:text-2xl text-zinc-300 mb-10">Product Manager & Frontend Dev + Integrations </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.a
                 href="https://github.com/rtagomata/PortBet"
@@ -193,8 +196,8 @@ export default function AnalyticsDashboardCaseStudy() {
               <p className="text-lg leading-relaxed">
               PortBet is a crypto speculation platform that lets users place directional bets on whether a portfolio of crypto
               assets will reach a target valuation by a given expiry date. Unlike traditional trading platforms that only support
-              leverage-based bets on single tokens, PortBet introduces a new category of financial primitive: the portfolio
-              contract.
+              leverage based bets on single tokens, PortBet introduces a new category of playing the markets, portfolio based
+              contracts.
               </p>
               <p className="text-lg leading-relaxed">
               I led the frontend development and product architecture, collaborating closely with two other co-founders. The platform
@@ -224,7 +227,7 @@ export default function AnalyticsDashboardCaseStudy() {
               <p className="text-lg leading-relaxed">
               Crypto speculation currently relies heavily on margin trading or holding assets outright. This introduces high
               cognitive and capital costs, especially for casual users. Additionally, there is no mechanism to bet on the collective
-              performance of a basket of tokens — despite the fact that investors often think in terms of portfolios, not
+              performance of a basket of tokens, despite the fact that investors often think in terms of portfolios, not
               individual coins.
               </p>
             </div>

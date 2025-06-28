@@ -16,6 +16,8 @@ export default function EduWikiCaseStudy() {
     "/rec1.png",
     "/rec2.png",
     "/rec3.png",
+    "/rec5.png",
+    "/rec4.png",
   ]
 
   // Tech stack items
@@ -181,7 +183,7 @@ export default function EduWikiCaseStudy() {
                 A focus on accessibility and responsive UI ensures usability across a diverse user base, while snackbars and dialogs reinforce consistent user feedback.
               </p>
               <p className="text-lg leading-relaxed">
-                Recipe Stash is more than a digital archive — it’s a scalable and interactive tool that supports the evolving needs of modern home cooks.
+                Recipe Stash is more than a digital archive, it’s a scalable and interactive tool that supports the evolving needs of modern home cooks.
               </p>
             </div>
           </motion.section>

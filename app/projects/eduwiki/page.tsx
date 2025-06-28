@@ -168,21 +168,21 @@ export default function EduWikiCaseStudy() {
             </h2>
             <div className="space-y-6 text-zinc-300">
               <p className="text-lg leading-relaxed">
-                EduWiki is a mobile-first academic collaboration platform built to help undergraduates bridge the gap
+                EduWiki is a mobile first academic collaboration platform built to help undergraduates bridge the gap
                 between passive classroom learning and the active research, writing, and peer review practices expected
-                in higher education. Designed for students transitioning into university-level academics, the app
-                simulates a wiki-style environment where users engage in content creation, evaluate peer submissions,
+                in higher education. Designed for students transitioning into university level academics, the app
+                simulates a wiki style environment where users engage in content creation, evaluate peer submissions,
                 and build academic writing habits through structured learning modules.
               </p>
               <p className="text-lg leading-relaxed">
-                Each course features guided units, citation tutorials, source validation exercises, and feedback loops —
+                Each course features guided units, citation tutorials, source validation exercises, and feedback loops, 
                 enabling students to think critically, write effectively, and understand what makes a credible
-                contribution to academic discourse. The app was developed with an accessibility-first mindset (e.g.,
-                text-to-speech for long-form content) and features gamified progress tracking to maintain engagement and
+                contribution to academic discourse. The app was developed with an accessibility first mindset (e.g.,
+                text-to-speech for long form content) and features gamified progress tracking to maintain engagement and
                 reinforce learning outcomes over time.
               </p>
               <p className="text-lg leading-relaxed">
-                EduWiki isn't just another study tool — it's an interactive scaffold that mirrors real-world research
+                EduWiki isn't just another study tool, it's an interactive scaffold that mirrors real-world research
                 workflows in a format designed for undergrads.
               </p>
             </div>
@@ -202,7 +202,7 @@ export default function EduWikiCaseStudy() {
             </h2>
             <div className="space-y-6 text-zinc-300">
               <p className="text-lg leading-relaxed">
-                First-year university students struggle to adapt to the academic rigor of post-secondary education.
+                First-year university students struggle to adapt to the academic rigor of post secondary education.
                 Challenges like evaluating sources, proper citations, and analytical writing are rarely taught
                 interactively. Existing tools are passive and lack real feedback loops.
               </p>
