@@ -70,7 +70,7 @@ export default function AboutPage() {
               </motion.h1>
 
               <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-zinc-700">
-                <Image src="/pfp2.jpg" alt="Razeen's portrait" fill className="object-cover" />
+                <Image src="/pfp2.png" alt="Razeen's portrait" fill className="object-cover" />
               </motion.div>
             </div>
 
