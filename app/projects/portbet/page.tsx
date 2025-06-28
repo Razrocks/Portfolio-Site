@@ -13,10 +13,10 @@ export default function AnalyticsDashboardCaseStudy() {
 
   // Project screenshots
   const projectImages = [
-    "/data-driven-insights.png",
-    "/marketing-dashboard-overview.png",
-    "/data-dashboard-overview.png",
-    "/marketing-performance-overview.png",
+    "/port1.png",
+    "/port2.png",
+    "/port3.png",
+    "/port4.png",
   ]
 
   // Tech stack items
