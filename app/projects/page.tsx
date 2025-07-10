@@ -23,9 +23,9 @@ const projects = [
   {
     id: "portbet",
     title: "PortBet Crypto Prediction Platform",
-    tagline: "The premier portfolio predictions market.",
+    tagline: "The premier predictions market.",
     description:
-      "Led frontend development and contributed to product strategy for PortBet, a platform that enables users to place directional bets on the future value of crypto portfolios. Designed + built core UX, authored internal product specs, and collaborated with co-founders to define contract logic, payouts, and risk models.",
+      "Led product direction and frontend development for PortBet, a crypto speculation platform for directional market bets. Designed core user flows, built the UI, and wrote internal product specs. Worked closely with co-founders to define contract logic, payouts, and risk models, aligning product vision with user needs and technical constraints.",
     outcome: "Built and launched internal beta with simulated ETH flow, validated market need through early user testing and aligned team with scalable frontend-backend architecture.",
     tags: ["Product Management", "Software Dev", "Crypto", "React", "Typescript","Javascript","Pricing API", "Trading"],
     image: "/port1.png",

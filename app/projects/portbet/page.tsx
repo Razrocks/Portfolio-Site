@@ -76,7 +76,7 @@ export default function AnalyticsDashboardCaseStudy() {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-500 bg-clip-text text-transparent">
-              PortBet Crypto Portfolio Predictions Platform ( In Dev)
+              PortBet Crypto Prediction Platform ( In Dev)
             </h1>
             <p className="text-xl md:text-2xl text-zinc-300 mb-10">Product Manager & Frontend Dev + Integrations </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -194,15 +194,14 @@ export default function AnalyticsDashboardCaseStudy() {
             </h2>
             <div className="space-y-6 text-zinc-300">
               <p className="text-lg leading-relaxed">
-              PortBet is a crypto speculation platform that lets users place directional bets on whether a portfolio of crypto
-              assets will reach a target valuation by a given expiry date. Unlike traditional trading platforms that only support
-              leverage based bets on single tokens, PortBet introduces a new category of playing the markets, portfolio based
-              contracts.
+              PortBet is a crypto speculation platform that allows users to place directional bets on market outcomes within set timeframes. Built to reduce complexity
+               while preserving the excitement of high-upside speculation,
+               the platform aims to make crypto participation more accessible to a broader audience.
               </p>
               <p className="text-lg leading-relaxed">
-              I led the frontend development and product architecture, collaborating closely with two other co-founders. The platform
-              enables users to create or participate in contracts with For/Against positions, define payout logic (Basic or
-              Advanced), and optionally exit early or trade positions in a marketplace.
+              As the product lead and co-founder, I owned the end-to-end product lifecycle, from user research and product discovery to UI/UX design and frontend implementation. 
+              I designed core user flows, wireframes, and interfaces, and led development of the frontend architecture using modern web technologies.
+               I also collaborated on API structure and worked closely with our technical team to ensure seamless integration between the frontend and backend.
               </p>
               <p className="text-lg leading-relaxed">
               Our goal was to lower the knowledge barrier for crypto speculation while allowing high-upside returns for users with
@@ -225,10 +224,10 @@ export default function AnalyticsDashboardCaseStudy() {
             </h2>
             <div className="space-y-6 text-zinc-300">
               <p className="text-lg leading-relaxed">
-              Crypto speculation currently relies heavily on margin trading or holding assets outright. This introduces high
-              cognitive and capital costs, especially for casual users. Additionally, there is no mechanism to bet on the collective
-              performance of a basket of tokens, despite the fact that investors often think in terms of portfolios, not
-              individual coins.
+              Most crypto platforms today focus on advanced trading or just buying and holding coins. 
+              These options can be overwhelming or expensive for casual users. 
+              There's also no simple way for people to place straightforward bets on where the market is headed, 
+              even though many think in broader terms rather than just one coin at a time. PortBet solves this problem.
               </p>
             </div>
           </motion.section>
@@ -310,11 +309,11 @@ export default function AnalyticsDashboardCaseStudy() {
             </h2>
             <div className="space-y-6 text-zinc-300">
               <ul className="list-disc pl-8 space-y-3 text-lg">
-                <li className="pl-2">Create or bet on crypto portfolio contracts with defined expiry and target valuation</li>
-                <li className="pl-2">For/Against position system that enables directional bets with capped downside</li>
-                <li className="pl-2">Early exit functionality with fee-based collateral withdrawal</li>
-                <li className="pl-2">Position window mechanics to ensure fair play and incentivize early bets</li>
-                <li className="pl-2">Basic payout engine that distributes the losing side’s TVL proportionally</li>
+                <li className="pl-2">Create or join time-based crypto market predictions</li>
+                <li className="pl-2">Simple For/Against betting system with limited risk</li>
+                <li className="pl-2">Option to exit positions early with partial returns</li>
+                <li className="pl-2">Early participation incentives to reward timely decisions</li>
+                <li className="pl-2">Fair and transparent payout logic based on outcomes</li>
                 <li className="pl-2">ERC-20 ETH-based payments and withdrawals</li>
               </ul>
             </div>
@@ -386,7 +385,7 @@ export default function AnalyticsDashboardCaseStudy() {
 
             <div className="space-y-6 text-zinc-300">
               <ul className="list-disc pl-8 space-y-3 text-lg">
-                <li className="pl-2">Validated concept with multiple DeFi users who expressed interest in portfolio betting</li>
+                <li className="pl-2">Validated concept with multiple DeFi users who expressed interest in broad market betting</li>
                 <li className="pl-2">Improved platform modularity by splitting server/frontend, enabling future scalability</li>
                 <li className="pl-2">
                 Learned to bridge technical execution with user experience clarity in financial products
@@ -395,7 +394,7 @@ export default function AnalyticsDashboardCaseStudy() {
                 Discovered that most speculation users don’t want control over token-by-token positions
                 </li>
                 <li className="pl-2">
-                Refined internal process using Notion for product specs, vision alignment, and roadmap planning
+                Refined internal process using Notion for product specs, vision alignment, road-map planning, and Agile sprints
                 </li>
               </ul>
             </div>
